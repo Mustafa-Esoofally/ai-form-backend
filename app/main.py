@@ -5,12 +5,6 @@ from app.routes.save_address import save_address_router
 
 
 app = FastAPI()
-
-# origins = [
-#     "http://localhost:3000",
-#     "https://ai-form-frontend.vercel.app/",
-#     "https://ai-form-frontend-kvq60b2t7-mustafa-esoofallys-projects.vercel.app/"   
-# ]
 origins = ["*"]
 
 app.add_middleware(

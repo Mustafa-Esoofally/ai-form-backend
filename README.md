@@ -2,32 +2,33 @@
 
 ## Installation
 
-Install the LangChain CLI if you haven't yet
+install poetry
 
 ```bash
-pip install -U langchain-cli
+pip install poetry
 ```
 
-## Adding packages
+install all poetry libraries
 
 ```bash
-# adding packages from 
-# https://github.com/langchain-ai/langchain/tree/master/templates
-langchain app add $PROJECT_NAME
-
-# adding custom GitHub repo packages
-langchain app add --repo $OWNER/$REPO
-# or with whole git string (supports other git providers):
-# langchain app add git+https://github.com/hwchase17/chain-of-verification
-
-# with a custom api mount point (defaults to `/{package_name}`)
-langchain app add $PROJECT_NAME --api_path=/my/custom/path/rag
+poetry install
 ```
 
-Note: you remove packages by their api path
+## OpenAI API setup
 
 ```bash
-langchain app remove my/custom/path/rag
+export OPENAI_API_KEY = "<API Key>"
+```
+
+## Setup chromadb
+```bash
+pip install chromadb
+```
+
+## Launch Backend
+
+```bash
+uvicorn app.main:app --reload
 ```
 
 ## Setup LangSmith (Optional)
@@ -40,12 +41,6 @@ If you don't have access, you can skip this section
 export LANGCHAIN_TRACING_V2=true
 export LANGCHAIN_API_KEY=<your-api-key>
 export LANGCHAIN_PROJECT=<your-project>  # if not specified, defaults to "default"
-```
-
-## Launch LangServe
-
-```bash
-langchain serve
 ```
 
 ## Running in Docker

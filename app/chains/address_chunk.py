@@ -9,6 +9,8 @@ from langchain.prompts import (
 )
 from app.schemas import address_chunk_schema
 from app.schemas import Get_AddressChunk_Response
+from loguru import logger
+
 
 address_chunks = {}
 
