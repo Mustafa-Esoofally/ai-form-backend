@@ -1,9 +1,3 @@
-import os
-
-# os.environ['OPENAI_API_KEY'] = 'sk-proj-MoIPCe9jvmJEAQ9TtCCaT3BlbkFJoiSBwjwGSbpZh0K1AX3n'
-
-# Your code here
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes.address_chunk import address_chunk_router
