@@ -7,8 +7,6 @@ from langchain.prompts import (
     SystemMessagePromptTemplate,
     HumanMessagePromptTemplate,
 )
-from loguru import logger
-
 from app.schemas import address_chunk_schema
 from app.schemas import Get_AddressChunk_Response
 
