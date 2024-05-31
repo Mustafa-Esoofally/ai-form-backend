@@ -14,7 +14,8 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
-    "https://ai-form-frontend.vercel.app/"
+    "https://ai-form-frontend.vercel.app/",
+    "https://ai-form-frontend-kvq60b2t7-mustafa-esoofallys-projects.vercel.app/"   
 ]
 
 app.add_middleware(
